@@ -1,0 +1,124 @@
+.food-item {
+  width: 100%;
+  margin: auto;
+  border-radius: 15px;
+  box-shadow: 1px 1px 10px #00000015;
+  transition: all 0.5s ease-in-out;
+  animation: fadeIn 2s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.food-item:hover {
+  transform: scale(1.1);
+  box-shadow: 2px 2px 10px #14101044;
+}
+.food-item:hover hr {
+  width: 100%;
+}
+.food-item-image {
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+}
+.food-item hr {
+  margin: 10px 0;
+  width: 40%;
+  height: 3px;
+  border-radius: 100px;
+  background: linear-gradient(to right, rgb(0, 174, 255), rgb(255, 60, 0));
+  transition: all 1s ease-in-out;
+}
+
+.food-item-info {
+  padding: 10px 15px 15px 15px;
+}
+.food-item-name-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.food-item-name-rating p {
+  position: relative;
+  width: max-content;
+  font-size: 18px;
+  font-weight: 500;
+}
+.food-item-name-rating p::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, rgb(255, 0, 98), rgb(255, 60, 0));
+  left: 0;
+  bottom: 0;
+  transition: 1s;
+}
+.food-item-name-rating p:hover::after {
+  width: 0;
+}
+.food-item-name-rating img {
+  width: 70px;
+}
+.food-item-desc {
+  font-size: 12px;
+  /* line-height: 1.5; */
+  color: #676767;
+}
+.food-item-price {
+  right: 0;
+  color: tomato;
+  /* color: black; */
+  font-weight: 300;
+  font-size: 20px;
+  text-align: right;
+}
+.food-item-price span {
+  margin-left: 5px;
+  color: rgb(19, 2, 8);
+  text-shadow: 1px 1px 2px #00ffea;
+  font-weight: 500;
+  font-size: 18px;
+}
+.food-item-img-container {
+  position: relative;
+}
+.food-item-img-container .add {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  width: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: all 0.3s ease-in-out;
+}
+.food-item-img-container .add:hover {
+  transform: scale(1.2);
+  border: #00ffea;
+  box-shadow: 0 2px 8px 0 rgba(0, 233, 97, 0.918),
+    0 6px 20px 0 rgba(255, 51, 0, 0.973);
+}
+.food-item-counter {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px;
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: all 0.5s ease-in-out;
+}
+.food-item-counter:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px 0 rgb(255, 1, 56), 0 6px 20px 0 rgba(4, 255, 79, 0.747);
+}
